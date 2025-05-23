@@ -9,11 +9,6 @@ import { getFullTitleData } from '../../actions';
 
 // Define a more realistic estimate of words per section based on CFR patterns
 // Average CFR section length varies from 150-700 words
-const WORDS_PER_SECTION = {
-  short: { min: 80, max: 250 },
-  medium: { min: 250, max: 600 },
-  long: { min: 600, max: 1200 }
-};
 
 // Colors for pie chart
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8', '#82ca9d', '#ffc658', '#8dd1e1'];

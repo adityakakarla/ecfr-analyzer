@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
 } from 'recharts';
-import { getAgencyData, getFullTitleData } from '../../actions';
+import { getAgencyData } from '../../actions';
 
 // Mock word count data - In a real application, we would calculate this from actual content
 const mockAgencyWordCounts: Record<string, number> = {
@@ -33,6 +33,8 @@ export default function AgencyMetrics({ selectedTitle = "1" }: AgencyMetricsProp
   const [agencyData, setAgencyData] = useState<any[]>([]);
   const [agencyWordCountData, setAgencyWordCountData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+
+  console.log(agencyData)
 
   useEffect(() => {
     async function loadAgencyData() {
